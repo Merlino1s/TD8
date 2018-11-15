@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Height="64" Margin="60,169,0,0" TextWrapping="Wrap" Text="Opération à éffectuer" VerticalAlignment="Top" Width="170" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Height="64" Margin="60,67,0,0" TextWrapping="Wrap" Text="Compte" VerticalAlignment="Top" Width="170" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Height="64" Margin="60,275,0,0" TextWrapping="Wrap" Text="Montant" VerticalAlignment="Top" Width="170" FontSize="18"/>
+        <ComboBox  HorizontalAlignment="Left" Height="34" Margin="492,67,0,0" ItemsSource="{Binding Comptes}" SelectedItem="{Binding CompteSelectionne}" DisplayMemberPath="IdCompte" SelectedIndex="0" VerticalAlignment="Top" Width="252"/>
+        <ComboBox HorizontalAlignment="Left" Height="34" Margin="492,169,0,0" ItemsSource="{Binding Operations}" SelectedItem="{Binding OperationSelectionnee}"  SelectedIndex="0" VerticalAlignment="Top" Width="252"/>
+        <TextBox Text="{Binding Montant}" HorizontalAlignment="Left" Height="30" Margin="492,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" />
+        <Button Content="Annuler" Command="{Binding BtnAnnule}" HorizontalAlignment="Left" Height="70" Margin="420,339,0,0" VerticalAlignment="Top" Width="228" FontSize="18"/>
+        <Button Content="Valider" Command="{Binding BtnSetOperationBancaire}" HorizontalAlignment="Left" Height="70" Margin="192,339,0,0" VerticalAlignment="Top" Width="228" FontSize="18"/>
+
     </Grid>
 </Window>
